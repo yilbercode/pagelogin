@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="helado.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a 🍦HOMECREAM🍦</title>
+    <style>
+
+ :root {
+    --color-background: #070049;
+    --color-primary: #001aff;
+    --color-secondary: #345fec;
+    --color-text: #fff;
+  }
+  
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://images8.alphacoders.com/373/373000.jpg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover; /* Ajusta el tamaño para cubrir todo el fondo */
+           background-position: center; /* Centra la imagen en el fondo */
+            height: 100vh;
+            
+        }
+
+        .ventana-bienvenida {
+            background-image: url();
+            padding: 30px;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width:500px ;
+            height: 700px;
+           font-size: 20px;
+           margin: 40px 0 40px 40px; /* Ajuste del margen izquierdo a 40px y eliminación del margen derecho */
+           margin-left: 0;
+           
+
+        }
+        .ventana-bienvenida h2{
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: antiquewhite;
+        }
+        .ventana-bienvenida h3{
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: antiquewhite;
+        }
+
+
+        .formulario {
+            margin-top: 20px;
+        }
+
+        .formulario label {
+            display: block;
+            margin-bottom: 15px;
+            color: #3601c7; 
+            text-align: initial;
+        }
+
+        .formulario input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .formulario button {
+    background-color: #070049;
+    color: #ffffff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Agrega la propiedad de transición */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.formulario button:hover {
+    background-color: #001aff;
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+
+   
+        .ventana-bienvenida :hover{
+            text-align: center;
+         transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+         transition: transform 0.3s ease; /* Agrega la propiedad de transición */
+         color: #45009e;
+        }
+
+        .ventana-bienvenida h3{ 
+        color: #45009e;
+        font-size: 40px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     color:#4b016d;
+     transition: transform 0.3s ease; /* Agrega la propiedad de transición */
+    }
+        
+    .ventana-bienvenida h3:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+    color: #345fec; /* Cambia el color al pasar el cursor */
+}
+.ventana-bienvenida h4:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+    color: #345fec; /* Cambia el color al pasar el cursor */
+}
+
+      
+    
+ 
+        
+    </style>
+</head>
+<body>
+
+    <div class="ventana-bienvenida">
+        <h3>Bienvenido a HOMECREAM</h3>
+        <h4> <img src="img/pngwing.com (4).png"  width="180" height="230"></h4>
+   
+       
+    
+        <p style="color: rgb(255, 255, 255);">Por favor, ingresa tus datos:</p>
+    
+        <div class="formulario">
+             <label for="nombre">Nombre:</label> </li>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre"> 
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" placeholder="Ingresa tu correo electrónico">
+
+        
+            <!-- Cambio en el botón para pasar el nombre a la función ingresar -->
+            <button onclick="ingresar(document.getElementById('nombre').value)">Ingresar</button>
+        </div>
+    </div>
+
+    <script>
+        function ingresar(nombre) {
+            // Puedes agregar lógica adicional para procesar la información del formulario si es necesario
+            alert('Bienvenido ' + nombre +' a nuestra tienda online.');
+    
+            // Redireccionar a la página deseada
+            window.location.href = 'https://yilbercode.github.io/yilbercode/';
+        }
+
+        // Recuperar datos almacenados al cargar la página (si existen)
+        window.onload = function() {
+            var nombreAlmacenado = localStorage.getItem('nombre');
+            var correoAlmacenado = localStorage.getItem('correo');
+
+            // Puedes usar estos valores como desees, por ejemplo, para prellenar el formulario
+            if (nombreAlmacenado && correoAlmacenado) {
+                document.getElementById('nombre').value = nombreAlmacenado;
+                document.getElementById('correo').value = correoAlmacenado;
+            }
+        };
+         
+        
+        
+    </script>
+    
+</body>
+</html>
